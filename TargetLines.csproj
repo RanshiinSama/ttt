@@ -1,0 +1,91 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<LangVersion>9.0</LangVersion>
+		<Version>1.0.0.0</Version>
+		<Configurations>Debug;Release;Unlocked</Configurations>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<ProduceReferenceAssembly>false</ProduceReferenceAssembly>
+		<PlatformTarget>x64</PlatformTarget>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+		<Deterministic>false</Deterministic>
+		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+	</PropertyGroup>
+
+	<ItemGroup>
+    	<Content Include="Data\TargetLine.png">
+    	  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    	  <Visible>false</Visible>
+    	</Content>
+		<Content Include="Data\TargetEdge.png">
+    	  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    	  <Visible>false</Visible>
+    	</Content>
+  	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="DalamudPackager" Version="2.1.10" />
+	</ItemGroup>
+
+	<PropertyGroup>
+    	<DalamudLibPath>$(appdata)\XIVLauncher\addon\Hooks\dev\</DalamudLibPath>
+    	<AssemblyVersion></AssemblyVersion>
+  	</PropertyGroup>
+  
+	<PropertyGroup Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Linux)))'">
+    	<DalamudLibPath>$(DALAMUD_HOME)/</DalamudLibPath>
+  	</PropertyGroup>
+  
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+	  <NoWarn>1701;1702;CS0472;CA1416</NoWarn>
+	  <LangVersion>11.0</LangVersion>
+	</PropertyGroup>
+  
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unlocked|AnyCPU'">
+	  <NoWarn>1701;1702;CS0472;CA1416</NoWarn>
+	  <LangVersion>11.0</LangVersion>
+	  <DefineConstants>PROBABLY_BAD</DefineConstants>
+	</PropertyGroup>
+  
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+	  <NoWarn>1701;1702;CS0472;CA1416</NoWarn>
+	  <LangVersion>11.0</LangVersion>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<!--You may need to adjust these paths yourself. These point to a Dalamud assembly in AppData.-->
+		<Reference Include="Dalamud">
+			<HintPath>$(DalamudLibPath)Dalamud.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="ImGui.NET">
+			<HintPath>$(DalamudLibPath)ImGui.NET.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="ImGuiScene">
+			<HintPath>$(DalamudLibPath)ImGuiScene.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="Lumina">
+			<HintPath>$(DalamudLibPath)Lumina.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="Lumina.Excel">
+			<HintPath>$(DalamudLibPath)Lumina.Excel.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="Newtonsoft.Json">
+			<HintPath>$(DalamudLibPath)Newtonsoft.Json.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="FFXIVClientStructs">
+			<HintPath>$(DalamudLibPath)FFXIVClientStructs.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+	</ItemGroup>
+
+</Project>

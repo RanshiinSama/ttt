@@ -1,0 +1,29 @@
+[
+  {
+    "Author": "RANSHIIN",
+    "Name": "TARGETTEST",
+    "Description": "THIS IS TEST.",
+    "InternalName": "TESTTARGET",
+    "AssemblyVersion": "1.5.8",
+    "RepoUrl": "https://github.com/RanshiinSama/Test",
+    "ApplicableVersion": "any",
+    "Tags": [
+      "bdth",
+      "housing",
+      "float",
+      "place",
+      "glitch",
+      "furnishing",
+      "LeonBlade"
+    ],
+    "DalamudApiLevel": 8,
+    "IconUrl": "https://github.com/LeonBlade/BDTHPlugin/raw/main/icon.png",
+    "IsHide": "False",
+    "IsTestingExclusive": "False",
+    "LastUpdated": 1673872070,
+    "DownloadCount": 39420,
+    "DownloadLinkInstall": "https://github.com/RanshiinSama/Test",
+    "DownloadLinkTesting": "https://github.com/RanshiinSama/Test",
+    "DownloadLinkUpdate": "https://github.com/RanshiinSama/Test"
+  },
+]
