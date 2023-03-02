@@ -5,7 +5,7 @@
     "Description": "THIS IS TEST.",
     "InternalName": "TESTTARGET",
     "AssemblyVersion": "1.5.8",
-    "RepoUrl": "https://github.com/RanshiinSama/Test",
+    "RepoUrl": "https://github.com/RanshiinSama/ttt",
     "ApplicableVersion": "any",
     "Tags": [
       "bdth",
@@ -22,8 +22,8 @@
     "IsTestingExclusive": "False",
     "LastUpdated": 1673872070,
     "DownloadCount": 39420,
-    "DownloadLinkInstall": "https://github.com/RanshiinSama/Test",
-    "DownloadLinkTesting": "https://github.com/RanshiinSama/Test",
-    "DownloadLinkUpdate": "https://github.com/RanshiinSama/Test"
+    "DownloadLinkInstall": "https://github.com/RanshiinSama/ttt",
+    "DownloadLinkTesting": "https://github.com/RanshiinSama/ttt",
+    "DownloadLinkUpdate": "https://github.com/RanshiinSama/ttt"
   },
 ]
